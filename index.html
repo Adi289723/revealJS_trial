@@ -2,40 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Q4 2025 Earnings Report - Interactive Presentation</title>
 
-    <!-- RevealJS Core CSS from CDN -->
+    <!-- RevealJS CSS -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css"
     />
-    <!-- Syntax Highlighting -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css"
+      href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/monokai.min.css"
     />
 
     <style>
-      /* Custom Styling */
-      body {
+      html, body {
+        margin: 0;
+        padding: 0;
         background: #1a1a1a;
+        overflow: hidden;
       }
 
       .reveal {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
 
-      .reveal h1,
-      .reveal h2,
-      .reveal h3 {
+      .reveal h1, .reveal h2, .reveal h3 {
         text-transform: uppercase;
         font-weight: 700;
       }
@@ -88,13 +84,6 @@
         letter-spacing: 1px;
       }
 
-      .metric-value {
-        font-size: 1.6em;
-        color: #42f545;
-        font-weight: bold;
-        margin-top: 5px;
-      }
-
       .comparison-table {
         font-size: 0.75em;
         margin: 20px auto;
@@ -131,6 +120,7 @@
   <body>
     <div class="reveal">
       <div class="slides">
+        
         <!-- SLIDE 1: TITLE SLIDE -->
         <section>
           <h1 style="font-size: 3.5em; margin-bottom: 30px;">
@@ -145,10 +135,6 @@
           <p style="margin-top: 60px; color: #888; font-size: 0.9em;">
             Quarterly Stakeholder Presentation • November 2025
           </p>
-
-          <aside class="notes">
-            Welcome to the Q4 2025 earnings presentation. This is the title slide.
-          </aside>
         </section>
 
         <!-- SLIDE 2: EXECUTIVE SUMMARY -->
@@ -161,23 +147,13 @@
             <li><strong>Customer Retention Rate:</strong> 94.7%</li>
             <li><strong>Operating Margin:</strong> 13.7% <span style="color: #42f545;">(↑1.2 bps)</span></li>
           </ul>
-
-          <aside class="notes">
-            Key executive summary points for stakeholder review.
-          </aside>
         </section>
 
         <!-- SLIDE 3: KEY PERFORMANCE INDICATORS -->
         <section>
           <h2 style="margin-bottom: 40px;">Key Performance Indicators</h2>
-          <div
-            style="
-              display: flex;
-              justify-content: space-around;
-              align-items: center;
-              margin-top: 80px;
-            "
-          >
+          <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 80px;">
+            
             <div class="fragment fade-up" style="text-align: center;">
               <div class="financial-metric">2.4B</div>
               <p style="color: #aaa; margin-top: 10px; font-size: 0.9em;">REVENUE</p>
@@ -204,12 +180,10 @@
           <p style="font-size: 0.9em; color: #bbb; margin-bottom: 20px;">Revenue Forecasting Algorithm (Python)</p>
           <pre><code class="language-python" data-trim>
 def calculate_quarterly_revenue(baseline, growth_rate, market_expansion):
-    """Calculate projected quarterly revenue"""
     organic_growth = baseline * (1 + growth_rate / 100)
     total_revenue = organic_growth + market_expansion
     return round(total_revenue, 2)
 
-# Q4 2025 Projection
 result = calculate_quarterly_revenue(
     baseline=2142.5,
     growth_rate=12.0,
@@ -330,9 +304,6 @@ async function fetchMetrics() {
     document.getElementById('revenue').textContent = 
       `$${(metrics.revenue / 1000).toFixed(1)}B`;
     
-    document.getElementById('growth').textContent = 
-      `${metrics.growth_rate}% YoY`;
-    
   } catch (error) {
     console.error('Metrics fetch failed:', error);
   }
@@ -369,29 +340,21 @@ setInterval(fetchMetrics, 5 * 60 * 1000);
         <!-- SLIDE 10: KEY TAKEAWAYS -->
         <section>
           <h2 style="margin-bottom: 50px;">Key Takeaways</h2>
-          <ul
-            style="
-              font-size: 1.2em;
-              line-height: 2;
-              text-align: left;
-              max-width: 900px;
-              margin: 0 auto;
-            "
-          >
+          <ul style="font-size: 1.2em; line-height: 2; text-align: left; max-width: 900px; margin: 0 auto;">
             <li class="fragment" style="color: #42f545;">
               ✓ Strong revenue acceleration across all segments
             </li>
             <li class="fragment" style="color: #42f545; margin-top: 15px;">
-              ✓ Margin expansion through operational efficiency & scale
+              ✓ Margin expansion through operational efficiency
             </li>
             <li class="fragment" style="color: #42f545; margin-top: 15px;">
-              ✓ Successful new market penetration (APAC +18% growth)
+              ✓ Successful market penetration (APAC +18%)
             </li>
             <li class="fragment" style="color: #42f545; margin-top: 15px;">
-              ✓ Strategic investments position for sustained growth
+              ✓ Strategic investments position for growth
             </li>
             <li class="fragment" style="color: #42f545; margin-top: 15px;">
-              ✓ Confident in 2026 guidance with multiple growth drivers
+              ✓ Confident in 2026 guidance
             </li>
           </ul>
         </section>
@@ -406,36 +369,44 @@ setInterval(fetchMetrics, 5 * 60 * 1000);
             <span class="email-badge">📧 21f3002781@ds.study.iitm.ac.in</span>
           </p>
           <p style="color: #888; font-size: 0.95em;">
-            For detailed financial statements and investor relations inquiries
+            For detailed financial statements and inquiries
           </p>
         </section>
+
       </div>
     </div>
 
-    <!-- RevealJS Scripts from CDN (FIXED VERSIONS) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <!-- RevealJS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/highlight.min.js"></script>
 
-    <!-- RevealJS Initialization -->
+    <!-- Initialize RevealJS -->
     <script>
-      Reveal.initialize({
-        hash: true,
-        transition: 'slide',
-        transitionSpeed: 'default',
-        controls: true,
-        progress: true,
-        center: true,
-        slideNumber: true,
-        overview: true,
-        keyboard: true,
-        embedded: true,
-        width: '100%',
-        height: '100%',
-        margin: 0.1,
-        minScale: 0.5,
-        maxScale: 2.0,
-        plugins: [RevealNotes, RevealHighlight]
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            controls: true,
+            progress: true,
+            center: true,
+            slideNumber: true,
+            overview: true,
+            keyboard: true,
+            embedded: true,
+            plugins: []
+          });
+
+          setTimeout(function() {
+            hljs.highlightAll();
+          }, 100);
+
+        } catch(e) {
+          console.error('Error:', e);
+        }
       });
     </script>
   </body>
